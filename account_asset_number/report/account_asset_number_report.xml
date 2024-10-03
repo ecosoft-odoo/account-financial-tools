@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <template id="report_simple_asset_number">
-        <div style="width: 32%; display: inline-table; height: 10rem;">
+        <div style="width: 1rem; display: inline-table; height: 10rem;">
+            <t t-set="profile" t-value="asset.profile_id" />
             <table class="table table-bordered mb-0" style="border: 2px solid black;">
-                <tr>
+                <tr t-if="profile.show_display_name">
                     <th class="table-active text-left" style="height: 4rem;">
                         <strong t-field="asset.display_name" />
                     </th>
                 </tr>
                 <tr>
                     <td class="text-center align-middle" style="height: 6rem;">
-                        <t t-set="profile" t-value="asset.profile_id" />
                         <t t-if="asset.number">
                             <t t-if="profile.barcode_type == 'barcode'">
                                 <img

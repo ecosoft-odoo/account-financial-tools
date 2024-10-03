@@ -29,6 +29,9 @@ class AccountAssetProfile(models.Model):
         default=75,
         help="Height (in px) of the barcode or the QR code",
     )
+    show_display_name = fields.Boolean(
+        help="If check, asset display name will be shown on report.",
+    )
 
     @api.model
     def _get_domain_sequence_id(self):

@@ -23,6 +23,10 @@
                         attrs="{'invisible': [('barcode_type', '=', 'qr')],
                                 'required': [('use_sequence', '=', True)]}"
                     />
+                    <field
+                        name="show_display_name"
+                        attrs="{'required': [('use_sequence', '=', True)]}"
+                    />
                     <field name="use_sequence" />
                     <field
                         name="sequence_id"
